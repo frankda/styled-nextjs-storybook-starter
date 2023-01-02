@@ -1,3 +1,6 @@
 {
-  "extends": ["next/core-web-vitals", "@frank.da"]
+  "extends": ["next/core-web-vitals", "@frank.da"],
+  "rules": {
+    "import/no-anonymous-default-export": "off"
+  }
 }
