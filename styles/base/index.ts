@@ -1,4 +1,3 @@
-import { merge } from 'lodash'
 import type { DeepPartial } from 'types'
 import animation from './animation'
 import breakpoint from './breakpoint'
@@ -22,7 +21,7 @@ export interface BaseTheme {
 export const createTheme = <OverridesType extends DeepPartial<BaseTheme>>(
   overrides?: OverridesType,
 ): BaseTheme & OverridesType =>
-    merge(
+    Object.assign(
       {},
       {
         animation,
