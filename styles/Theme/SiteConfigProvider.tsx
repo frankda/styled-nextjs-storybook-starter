@@ -3,16 +3,17 @@ import { ThemeProvider } from 'styled-components'
 import { defaultTheme } from './default'
 import { Theme } from '../index'
 
-const themeMapping: Record<string, Theme> = {
+// Add different theme to themeMapping
+export const themes: Record<string, Theme> = {
   default: defaultTheme
 }
 
 const getSiteTheme = (themeName: string): Theme => {
-  if (themeMapping[themeName]) {
-    return themeMapping[themeName]
+  if (themes[themeName]) {
+    return themes[themeName]
   } else {
     console.error(`The theme name ${themeName} is not defined, fallback to default theme`)
-    return themeMapping.default
+    return themes.default
   }
 }
 

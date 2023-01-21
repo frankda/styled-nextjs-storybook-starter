@@ -10,7 +10,8 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
-    '@storybook/addon-a11y'
+    '@storybook/addon-a11y',
+    "storybook-addon-styled-component-theme/dist/preset"
   ],
   "framework": "@storybook/react",
   "core": {
@@ -19,5 +20,5 @@ module.exports = {
   webpackFinal: async (config, { configType }) => {
     config.resolve.plugins = [new TsconfigPathsPlugin()];
     return config;
-}
+  }
 }
